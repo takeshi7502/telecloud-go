@@ -26,7 +26,7 @@ COPY . .
 RUN git submodule update --init --recursive
 
 # Build frontend (Tailwind + download JS/CSS libs)
-RUN cd web && sed -i 's/\r$//' build-frontend.sh && bash build-frontend.sh 1
+RUN cd web && sed -i 's/\r$//' build-frontend.sh && bash build-frontend.sh
 
 # Build Go binary for TARGET architecture
 ARG VERSION=dev
